@@ -45,8 +45,8 @@ class ImmutableWidget extends StatelessWidget {
                 child: Text(
                     'Professional Goal',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-                  ),
                 ),
+              ),
             ],
           ),
         ),
