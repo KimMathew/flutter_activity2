@@ -20,7 +20,6 @@ class BasicScreen extends StatelessWidget{
           ], ),
       body: ImmutableWidget(),
       drawer: Drawer(
-        width: 400,
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
