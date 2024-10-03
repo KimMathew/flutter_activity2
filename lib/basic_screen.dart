@@ -40,7 +40,7 @@ class BasicScreen extends StatelessWidget{
               ),
             ),
             ListTile( //List Tile 1
-              leading: const Icon(Icons.brightness_1_rounded, color: Color(0xFF757575), size: 35,),
+              leading: const Icon(Icons.school, color: Color(0xFF757575), size: 35,),
               title: const Text(
                 'Education',
                 style: TextStyle(fontSize: 18),
@@ -49,7 +49,7 @@ class BasicScreen extends StatelessWidget{
             ),
             Divider(),
             ListTile( //List Tile 2
-              leading: const Icon(Icons.brightness_1_rounded, color: Color(0xFF757575), size: 35,),
+              leading: const Icon(Icons.verified_user, color: Color(0xFF757575), size: 35,),
               title: const Text(
                 'Skills',
                 style: TextStyle(fontSize: 18),
@@ -58,7 +58,7 @@ class BasicScreen extends StatelessWidget{
             ),
             Divider(),
             ListTile( //List Tile 3
-              leading: const Icon(Icons.brightness_1_rounded, color: Color(0xFF757575), size: 35,),
+              leading: const Icon(Icons.assignment, color: Color(0xFF757575), size: 35,),
               title: const Text(
                 'Projects',
                 style: TextStyle(fontSize: 18),
@@ -67,7 +67,7 @@ class BasicScreen extends StatelessWidget{
             ),
             Divider(),
             ListTile( //List Tile 4
-              leading: const Icon(Icons.brightness_1_rounded, color: Color(0xFF757575), size: 35,),
+              leading: const Icon(Icons.work, color: Color(0xFF757575), size: 35,),
               title: const Text(
                 'Experience',
                 style: TextStyle(fontSize: 18),
