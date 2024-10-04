@@ -14,11 +14,7 @@ class ImmutableWidget extends StatelessWidget {
               SizedBox(height: 20), //Create vertical space between two widgets
               CircleAvatar(
                 radius: 70,
-                backgroundColor: Colors.blue.shade100,
-                child: Text(
-                  'KM',
-                  style: TextStyle(fontSize: 40, color: Colors.blue.shade700),
-                ),
+                backgroundImage: AssetImage('assets/profile.jpg'),
               ),
               SizedBox(height: 10),
               Text(
@@ -35,16 +31,27 @@ class ImmutableWidget extends StatelessWidget {
               ),
               Container(
                 margin: EdgeInsets.all(20),
-                padding: EdgeInsets.fromLTRB(15, 6, 0, 0),
-                height: 140,
+                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                height: 150,
                 width: 360,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(5),
                 ),
-                child: Text(
-                    'Professional Goal',
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                    'Professional Goal:',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                    ),
+                    SizedBox(height: 5),
+                    Text(
+                      'To be a professional software developer focused on UI/UX design, creating intuitive, user-centered applications that enhance user experiences and meet business goals.',
+                      style: TextStyle(fontSize: 16),
+                      textAlign: TextAlign.justify,
+                    ),
+                  ],
                 ),
               ),
             ],
