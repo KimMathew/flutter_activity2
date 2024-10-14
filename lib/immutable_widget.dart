@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'login_page.dart';
 
 class ImmutableWidget extends StatelessWidget {
   const ImmutableWidget({super.key});
@@ -38,20 +39,26 @@ class ImmutableWidget extends StatelessWidget {
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(5),
                 ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                    'Professional Goal:',
+                child: Text(
+                    'Professional Goal',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-                    ),
-                    SizedBox(height: 5),
-                    Text(
-                      'To be a professional software developer focused on UI/UX design, creating intuitive, user-centered applications that enhance user experiences and meet business goals.',
-                      style: TextStyle(fontSize: 16),
-                      textAlign: TextAlign.justify,
-                    ),
-                  ],
+                ),
+              ),
+
+              // log out button
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context, 
+                    MaterialPageRoute(builder: (context) => LoginPage())
+                  );
+                },
+                child: const Text(
+                  'Log Out',
+                  style: TextStyle(fontSize: 16, color: Colors.white,),
                 ),
               ),
             ],
