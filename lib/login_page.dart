@@ -8,7 +8,7 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   final _formKey = GlobalKey<FormState>(); // Define the form key
-  String email = '';
+  String username = '';
   String password = '';
 
   @override
@@ -61,7 +61,7 @@ class _LoginPageState extends State<LoginPage> {
                       },
                       onChanged: (val) {
                         setState(() {
-                          email = val;
+                          username = val;
                         });
                       },
                     ),
@@ -99,7 +99,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
-                          if (email == 'KimMathew' && password == 'kimmathew123') {
+                          if (username == 'KimMathew' && password == 'kimmathew123') {
                             Navigator.pushReplacement(
                               context, 
                               MaterialPageRoute(builder: (context) => BasicScreen()),

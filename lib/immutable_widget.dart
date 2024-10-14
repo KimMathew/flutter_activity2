@@ -15,21 +15,33 @@ class ImmutableWidget extends StatelessWidget {
               SizedBox(height: 20), //Create vertical space between two widgets
               CircleAvatar(
                 radius: 70,
-                backgroundImage: AssetImage('assets/profile.jpg'),
+                backgroundColor: Colors.blue.shade100,
+                child: Text(
+                  'KM',
+                  style: TextStyle(fontSize: 40, color: Colors.blue.shade700),
+                  ),
               ),
               SizedBox(height: 10),
+
+              // name
               Text(
                 'Kim Mathew Bautista',
                 style: TextStyle(fontSize: 27, fontWeight: FontWeight.w500),
               ),
+
+              // contact number
               Text(
                 '+63 9162224481', 
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.grey.shade600),
               ),
+
+              // email
               Text(
                 '22-08736@g.batstate-u.edu.ph', 
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.grey.shade600),
               ),
+
+              // container for professional goal
               Container(
                 margin: EdgeInsets.all(20),
                 padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
