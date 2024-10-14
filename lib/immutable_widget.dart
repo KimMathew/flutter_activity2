@@ -1,8 +1,29 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'login_page.dart';
 
-class ImmutableWidget extends StatelessWidget {
+class ImmutableWidget extends StatefulWidget {
   const ImmutableWidget({super.key});
+
+  @override
+  _ImmutableWidgetState createState() => _ImmutableWidgetState();
+}
+
+class _ImmutableWidgetState extends State<ImmutableWidget> {
+  File? _image; // holds selected image
+
+  Future _pickImage() async {
+    final picker = ImagePicker();
+    final pickedImage = await picker.pickImage(source: ImageSource.gallery);
+
+    if (pickedImage != null) {
+      setState(() {
+        _image = File(pickedImage.path);
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(  
@@ -12,15 +33,21 @@ class ImmutableWidget extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
-              SizedBox(height: 20), //Create vertical space between two widgets
-              CircleAvatar(
-                radius: 70,
-                backgroundColor: Colors.blue.shade100,
-                child: Text(
-                  'KM',
-                  style: TextStyle(fontSize: 40, color: Colors.blue.shade700),
-                  ),
-              ),
+              SizedBox(height: 20),
+              GestureDetector(
+                onTap: _pickImage,
+                child: CircleAvatar(
+                  radius: 70,
+                  backgroundColor: Colors.blue.shade100,
+                  backgroundImage: _image != null ? FileImage(_image!) : null,
+                  child: _image == null
+                    ? Text(
+                      'KM',
+                      style: TextStyle(fontSize: 40, color: Colors.blue.shade700),
+                    )
+                    : null,
+                ),
+              ), //Create vertical space between two widgets
               SizedBox(height: 10),
 
               // name
@@ -52,8 +79,8 @@ class ImmutableWidget extends StatelessWidget {
                   borderRadius: BorderRadius.circular(5),
                 ),
                 child: Text(
-                    'Professional Goal',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                  'Professional Goal',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
                 ),
               ),
 
@@ -70,7 +97,7 @@ class ImmutableWidget extends StatelessWidget {
                 },
                 child: const Text(
                   'Log Out',
-                  style: TextStyle(fontSize: 16, color: Colors.white,),
+                  style: TextStyle(fontSize: 16, color: Colors.white),
                 ),
               ),
             ],
