@@ -1,6 +1,6 @@
 # Activity 2 and Quiz
 
-This project contains code about the **Activity 2 - Curriculum Vitae** and **Quiz - Updated Curriculum Vitae**
+This project contains the code for **Activity 2 - Curriculum Vitae** and **Quiz - Updated Curriculum Vitae**
 
 User Credentials of Login:
 - **Username:** KimMathew
