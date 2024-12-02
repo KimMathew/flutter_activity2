@@ -3,5 +3,5 @@
 This project contains code about the **Activity 2 - Curriculum Vitae** and **Quiz - Updated Curriculum Vitae**
 
 User Credentials of Login:
-- Username: KimMathew
-- Password: kimmathew123
+- **Username:** KimMathew
+- **Password:** kimmathew123
