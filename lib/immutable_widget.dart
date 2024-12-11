@@ -36,39 +36,56 @@ class _ImmutableWidgetState extends State<ImmutableWidget> {
               SizedBox(height: 20),
               GestureDetector(
                 onTap: _pickImage,
-                child: CircleAvatar(
-                  radius: 70,
-                  backgroundColor: Colors.blue.shade100,
-                  backgroundImage: _image != null ? FileImage(_image!) : null,
-                  child: _image == null
-                    ? Text(
-                      'KM',
-                      style: TextStyle(fontSize: 40, color: Colors.blue.shade700),
-                    )
-                    : null,
+                child: Stack(
+                  children: [
+                    CircleAvatar(
+                      radius: 70,
+                      backgroundColor: Colors.blue.shade100,
+                      backgroundImage: _image != null ? FileImage(_image!) : null,
+                      child: _image == null
+                        ? Text(
+                          'KM',
+                          style: TextStyle(fontSize: 40, color: Colors.blue.shade700),
+                        )
+                        : null,
+                    ),
+                    Positioned(
+                      bottom: 0,
+                      right: 10,
+                      child: Container(
+                        padding: EdgeInsets.all(4),
+                        decoration: BoxDecoration(
+                          color: Colors.blue,
+                          shape: BoxShape.circle,
+                        ),
+                        child: Icon(
+                          Icons.camera_alt,
+                          color: Colors.white,
+                          size: 20,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-              ), //Create vertical space between two widgets
+              ),
               SizedBox(height: 10),
 
-              // name
+              // Rest of your code remains the same...
               Text(
                 'Kim Mathew Bautista',
                 style: TextStyle(fontSize: 27, fontWeight: FontWeight.w500),
               ),
 
-              // contact number
               Text(
                 '+63 9162224481', 
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.grey.shade600),
               ),
 
-              // email
               Text(
                 '22-08736@g.batstate-u.edu.ph', 
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.grey.shade600),
               ),
 
-              // container for professional goal
               Container(
                 margin: EdgeInsets.all(20),
                 padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
@@ -84,7 +101,6 @@ class _ImmutableWidgetState extends State<ImmutableWidget> {
                 ),
               ),
 
-              // log out button
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,
@@ -107,3 +123,4 @@ class _ImmutableWidgetState extends State<ImmutableWidget> {
     );
   }
 }
+
